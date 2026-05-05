@@ -15,7 +15,9 @@
             .split("&")
             .map(function (s) { return s.replace(/~and~/g, "&"); })
             .join("?");
-          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+          // Only strip a trailing "/" if present; otherwise keep pathname intact.
+          var basePath = l.pathname.endsWith("/") ? l.pathname.slice(0, -1) : l.pathname;
+          window.history.replaceState(null, null, basePath + decoded + l.hash);
         }
       })(window.location);
     </script>
@@ -26,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <title>KawKaw Stall</title>
-    <script type="module" crossorigin src="/kkks-stall-app/assets/index-CichpR9V.js"></script>
+    <script type="module" crossorigin src="/kkks-stall-app/assets/index-CxBoB42x.js"></script>
     <link rel="stylesheet" crossorigin href="/kkks-stall-app/assets/index-C-0g2qSW.css">
   <link rel="manifest" href="/kkks-stall-app/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/kkks-stall-app/registerSW.js"></script></head>
   <body>
