@@ -1,6 +1,6 @@
 {
   "app": "stall-app",
-  "commit": "e122d29",
-  "builtAt": "2026-05-05T06:34:14.685Z",
-  "baseUrl": "https://kkks-admin-app.vercel.app"
+  "commit": "f003fa1",
+  "builtAt": "2026-05-05T13:26:15.783Z",
+  "baseUrl": "https://kkks-admin-app.vercel.app/api/v1"
 }
