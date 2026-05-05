@@ -11,7 +11,8 @@
       (function (l) {
         if (l.search && l.search[1] === "/") {
           var decoded = l.search
-            .slice(2)
+            // Keep the leading "/" from "?/..." so paths don't concatenate.
+            .slice(1)
             .split("&")
             .map(function (s) { return s.replace(/~and~/g, "&"); })
             .join("?");
