@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/kkks-stall-app/sw.js', { scope: '/kkks-stall-app/' })})}
